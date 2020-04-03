@@ -353,10 +353,11 @@ bool find(char id[12]){
             fscanf(fp,"%s %s %d %lf",b.code,b.name,&b.quantity,&b.cost);
             if(strcmp(b.code,id) == 0)
             {
+                fclose(fp);
                 return false;
             }
 		}   
     }
-    
+    fclose(fp);
     return true;
 }
